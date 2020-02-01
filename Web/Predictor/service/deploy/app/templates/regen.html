@@ -1,0 +1,18 @@
+<!-- extend from base layout -->
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Regenerate token seed</h1>
+<form action="" method="post" name="regen">
+    {{form.hidden_tag()}}
+    <p>
+        Login:<br>
+        {{form.login()}}<br>
+    </p>
+    <p>
+        OTP:<br>
+        {{form.otp()}}<br>
+    </p>
+    <p><input type="submit" value="Regen"></p>
+</form>
+{% endblock %}

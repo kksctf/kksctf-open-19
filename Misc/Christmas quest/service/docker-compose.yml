@@ -1,0 +1,14 @@
+version: '2.2'
+services:
+  pwn:
+    # image: pwn_container:latest
+    build: 
+        context: .
+    working_dir: /home/ctf
+    container_name: ${TEMPLATE_NAME:?err}
+    ports:
+      - "${TEMPLATE_PORT:?err}:1337"
+    entrypoint: "/usr/sbin/xinetd -dontfork"
+    mem_limit: 128m
+    pids_limit: 1024
+    cpus: 3.5

@@ -1,0 +1,34 @@
+ending: set([ServiceName(project=u'___', service='php', number=1)])
+Starting producer thread for ServiceName(project=u'___', service='php', number=1)
+http://localhost:None "GET /v1.25/images/____php/json HTTP/1.1" 200 None
+http://localhost:None "GET /v1.25/images/____php/json HTTP/1.1" 200 None
+Added config hash: 7650caa7189a89bbd337589f950c740f0de6b388d2070f6b2772d7f95bcb9d41
+http://localhost:None "POST /v1.25/containers/create?name=____php_1 HTTP/1.1" 201 88
+http://localhost:None "GET /v1.25/containers/d5a174bef74dbbd47cf858fefb0882f62c9b2e4a292ac92439339b49ae43c87e/json HTTP/1.1" 200 None
+http://localhost:None "POST /v1.25/networks/____default/disconnect HTTP/1.1" 200 0
+http://localhost:None "POST /v1.25/networks/____default/connect HTTP/1.1" 200 0
+http://localhost:None "POST /v1.25/containers/d5a174bef74dbbd47cf858fefb0882f62c9b2e4a292ac92439339b49ae43c87e/start HTTP/1.1" 204 0
+Finished processing: ServiceName(project=u'___', service='php', number=1)
+Creating ____php_1 ... done
+Finished processing: <Service: php>
+Pending: set([<Service: web>])
+Starting producer thread for <Service: web>
+http://localhost:None "GET /v1.25/containers/json?all=1&limit=-1&filters=%7B%22label%22%3A+%5B%22com.docker.compose.project%3D___%22%2C+%22com.docker.compose.service%3Dweb%22%2C+%22com.docker.compose.oneoff%3DFalse%22%5D%7D&trunc_cmd=0&size=0 HTTP/1.1" 200 3
+http://localhost:None "GET /v1.25/containers/json?all=1&limit=-1&filters=%7B%22label%22%3A+%5B%22com.docker.compose.project%3D___%22%2C+%22com.docker.compose.service%3Dweb%22%2C+%22com.docker.compose.oneoff%3DFalse%22%5D%7D&trunc_cmd=0&size=0 HTTP/1.1" 200 3
+Creating ____web_1 ... 
+Pending: set([ServiceName(project=u'___', service='web', number=1)])
+Starting producer thread for ServiceName(project=u'___', service='web', number=1)
+http://localhost:None "GET /v1.25/images/____web/json HTTP/1.1" 200 None
+http://localhost:None "GET /v1.25/images/____web/json HTTP/1.1" 200 None
+Added config hash: 9d5a5d516634c8717d083450863917dec9272f4a63aacb14e7f2283eda41c616
+http://localhost:None "GET /v1.25/containers/d5a174bef74dbbd47cf858fefb0882f62c9b2e4a292ac92439339b49ae43c87e/json HTTP/1.1" 200 None
+http://localhost:None "POST /v1.25/containers/create?name=____web_1 HTTP/1.1" 201 88
+http://localhost:None "GET /v1.25/containers/7f21ce2c7115fe9b973f1f69d537b9dc035f779e03b770ae87d78a643bd4d472/json HTTP/1.1" 200 None
+http://localhost:None "POST /v1.25/networks/____default/disconnect HTTP/1.1" 200 0
+http://localhost:None "GET /v1.25/containers/d5a174bef74dbbd47cf858fefb0882f62c9b2e4a292ac92439339b49ae43c87e/json HTTP/1.1" 200 None
+http://localhost:None "POST /v1.25/networks/____default/connect HTTP/1.1" 200 0
+http://localhost:None "POST /v1.25/containers/7f21ce2c7115fe9b973f1f69d537b9dc035f779e03b770ae87d78a643bd4d472/start HTTP/1.1" 204 0
+Finished processing: ServiceName(project=u'___', service='web', number=1)
+Creating ____web_1 ... done
+Finished processing: <Service: web>
+

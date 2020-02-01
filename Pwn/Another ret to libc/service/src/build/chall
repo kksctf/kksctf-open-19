@@ -1,0 +1,3 @@
+#!/bin/bash
+
+timeout -k 30 30 /bin/sh -c 'LD_PRELOAD="/home/ctf/task/ld-linux.so.2 /home/ctf/task/libc.so.6.orig /home/ctf/task/libpthread.so.0" /home/ctf/task/chall_'

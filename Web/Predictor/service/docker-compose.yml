@@ -1,0 +1,17 @@
+version: '2.2'
+services:
+  web:
+    build:
+        context: .
+    working_dir: /code
+    container_name: ${TEMPLATE_NAME:?err}
+    ports:
+      - "${TEMPLATE_PORT:?err}:8080"
+    entrypoint:
+      "uwsgi --http :8080 -w app:app --processes 1 --threads 64"
+      #- python3
+      #- -O
+      #- run.py
+
+    mem_limit: 4g
+    pids_limit: 128

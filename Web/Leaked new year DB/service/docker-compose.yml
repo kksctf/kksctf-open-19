@@ -1,0 +1,19 @@
+version: '3'
+services:
+  web:
+    build:
+        context: .
+        dockerfile: web.Dockerfile
+    ports:
+      - "20006:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+    links:
+      - php
+
+  php:
+    build:
+        context: .
+        dockerfile: php.Dockerfile
+    volumes: 
+        - ./php.ini:/usr/local/etc/php/conf.d/xxx-devilbox-default-php.ini

@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /
+
+User-agent: docker
+Disallow: /8f3548793a68a30e4961d40fa974c8e0b260af95.log
+
+

@@ -1,0 +1,22 @@
+<html>
+  	<head>
+    	<title>Task</title>
+  	</head>
+  	<body>
+  		<div>:Task <a href="/index">Home</a></div>
+  		<div>:Task <a href="/login">Login</a></div>
+  		<div>:Task <a href="/register">Register</a></div>
+  		<div>:Task <a href="/regen">Regenerate new token</a></div>
+		<hr>
+		{% with messages = get_flashed_messages() %}
+			{% if messages %}
+				<ul>
+					{% for message in messages %}
+						<li>{{ message }} </li>
+					{% endfor %}
+				</ul>
+			{% endif %}
+		{% endwith %}
+		{% block content %}{% endblock %}
+	</body>
+</html>

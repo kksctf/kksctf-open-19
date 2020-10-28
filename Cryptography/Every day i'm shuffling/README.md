@@ -54,6 +54,6 @@ To decrypt a file, use this:
 
 The original text is an extract which comes from the poem "The Raven" by Alan Poe with the raven's quote replaced by a flag.
 
-flag: `kks{5h4ffl3_5h4ffl3_5h4ffl3}`
+flag: `kks{5huffl3_5huffl3_5huffl3}`
 
 Solver: [solver.py](solver.py)
